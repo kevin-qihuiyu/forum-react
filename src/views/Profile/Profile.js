@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Redirect } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/styles';
 import { Tabs, Tab, Divider, colors } from '@material-ui/core';
 
+import axios from 'utils/axios';
+
 import { Page } from 'components';
-import { Header, Timeline, Connections, Projects, Reviews } from './components';
+import { Header, Projects, General, Files } from './components';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -28,15 +30,35 @@ const Profile = props => {
   const classes = useStyles();
   const { id, tab } = match.params;
 
+  const [project, setProject] = useState(null);
+
+  useEffect(() => {
+    let mounted = true;
+
+    const fetchProject = () => {
+      axios.get('/api/projects/1').then(response => {
+        if (mounted) {
+          setProject(response.data.project);
+        }
+      });
+    };
+
+    fetchProject();
+
+    return () => {
+      mounted = false;
+    };
+  }, []);
+
   const handleTabsChange = (event, value) => {
     history.push(value);
   };
 
   const tabs = [
-    { value: 'timeline', label: 'Timeline' },
-    { value: 'connections', label: 'Connections' },
-    { value: 'projects', label: 'Projects' },
-    { value: 'reviews', label: 'Reviews' }
+    { value: 'general', label: '个人信息' },
+    { value: 'cv', label: '简历管理' },
+    { value: 'favoriteJobs', label: '收藏的职位' },
+    { value: 'appliedJobs', label: '已投递的职位' }
   ];
 
   if (!tab) {
@@ -70,10 +92,10 @@ const Profile = props => {
         </Tabs>
         <Divider className={classes.divider} />
         <div className={classes.content}>
-          {tab === 'timeline' && <Timeline />}
-          {tab === 'connections' && <Connections />}
-          {tab === 'projects' && <Projects />}
-          {tab === 'reviews' && <Reviews />}
+          {tab === 'general' && <General />}
+          {tab === 'cv' && <Files files={project.files} />}
+          {tab === 'favoriteJobs' && <Projects />}
+          {tab === 'appliedJobs' && <Projects />}
         </div>
       </div>
     </Page>

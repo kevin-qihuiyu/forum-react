@@ -60,7 +60,7 @@ mock.onGet('/api/kanban').reply(200, {
       title: 'Change the height of the top bar because it looks too chunky',
       desc:
         'We nede to make it aggresive with pricing because it’s in their interest to acquire us',
-      members: ['/images/avatars/avatar_11.png'],
+      members: ['/images/avatars/avatar_lvzhihao.jpg'],
       files: 0,
       comments: 0,
       progress: 0,
@@ -105,7 +105,7 @@ mock.onGet('/api/kanban').reply(200, {
         'We nede to make it aggresive with pricing because it’s in their interest to acquire us',
       members: [
         '/images/avatars/avatar_10.png',
-        '/images/avatars/avatar_11.png'
+        '/images/avatars/avatar_lvzhihao.jpg'
       ],
       files: 0,
       comments: 2,

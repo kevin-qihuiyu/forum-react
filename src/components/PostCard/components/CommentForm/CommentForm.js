@@ -46,7 +46,7 @@ const CommentForm = props => {
   const [value, setValue] = useState('');
 
   const sender = {
-    avatar: '/images/avatars/avatar_11.png'
+    avatar: '/images/avatars/avatar_lvzhihao.jpg'
   };
 
   const handleChange = event => {

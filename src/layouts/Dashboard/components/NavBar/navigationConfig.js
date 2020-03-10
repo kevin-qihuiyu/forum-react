@@ -13,40 +13,40 @@ export default [
     title: 'Pages',
     pages: [
       {
-        title: 'Overview',
+        title: '首页',
         href: '/overview',
         icon: HomeIcon
       },
       {
-        title: 'My Profile',
+        title: '个人主页',
         href: '/profile',
         icon: PersonIcon,
         children: [
           {
-            title: 'Timeline',
-            href: '/profile/1/timeline'
+            title: '个人信息',
+            href: '/profile/1/general'
           },
           {
-            title: 'Connections',
-            href: '/profile/1/connections'
+            title: '简历管理',
+            href: '/profile/1/cv'
           },
           {
-            title: 'Projects',
+            title: '收藏的职位',
             href: '/profile/1/projects'
           },
           {
-            title: 'Reviews',
-            href: '/profile/1/reviews'
-          }
+            title: '投递过的职位',
+            href: '/profile/1/projects'
+          },
         ]
       },
       {
-        title: 'Jobs',
+        title: '浏览职位',
         href: '/projects',
         icon: FolderIcon,
         children: [
           {
-            title: 'Browse',
+            title: '浏览职位',
             href: '/projects'
           },
           {
@@ -72,7 +72,7 @@ export default [
         ]
       },
       {
-        title: 'Management',
+        title: '管理投递',
         href: '/management',
         icon: BarChartIcon,
         children: [
@@ -104,7 +104,7 @@ export default [
         icon: PeopleIcon
       },
       {
-        title: 'Settings',
+        title: '设置',
         href: '/settings',
         icon: SettingsIcon,
         children: [

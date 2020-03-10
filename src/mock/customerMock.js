@@ -117,7 +117,7 @@ mock.onGet('/api/management/customers').reply(200, {
       id: uuid(),
       name: 'Lyu Zhihao',
       email: 'shen.zhi@devias.io',
-      avatar: '/images/avatars/avatar_11.png',
+      avatar: '/images/avatars/avatar_lvzhihao.jpg',
       spent: '2,300.00',
       type: 'Agency',
       currency: '$',

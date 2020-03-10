@@ -31,7 +31,7 @@ mock.onGet('/api/social-feed').reply(200, {
       id: uuid(),
       author: {
         name: 'Lyu Zhihao',
-        avatar: '/images/avatars/avatar_11.png'
+        avatar: '/images/avatars/avatar_lvzhihao.jpg'
       },
       message: 'Just made this home screen for a project, what-cha thinkin?',
       media: '/images/posts/post_1.jpg',
@@ -64,7 +64,7 @@ mock.onGet('/api/social-feed').reply(200, {
       id: uuid(),
       author: {
         name: 'Lyu Zhihao',
-        avatar: '/images/avatars/avatar_11.png'
+        avatar: '/images/avatars/avatar_lvzhihao.jpg'
       },
       message:
         'As a human being, you are designed in a way that makes you incapable of experiencing any positive emotion unless you set an aim and progress towards it. What makes you happy is not, in fact, attaining it, but making progress towards it.',

@@ -6,15 +6,15 @@ import mock from 'utils/mock';
 
 mock.onGet('/api/account/profile').reply(200, {
   profile: {
-    avatar: '/images/avatars/avatar_11.png',
+    avatar: '/images/avatars/avatar_lvzhihao.jpg',
     canHire: false,
-    country: 'USA',
+    country: '法国',
     email: 'shen.zhi@devias.io',
     firstName: 'Zhihao',
     isPublic: true,
     lastName: 'Lyu',
     phone: '+40 777666555',
-    state: 'Alabama',
+    state: '巴黎地区',
     timezone: '4:32PM (GMT-4)'
   }
 });

@@ -32,7 +32,7 @@ mock.onGet('/api/chat/conversations').reply(200, {
           sender: {
             authUser: true,
             name: 'Lyu Zhihao',
-            avatar: '/images/avatars/avatar_11.png'
+            avatar: '/images/avatars/avatar_lvzhihao.jpg'
           },
           content:
             'I would need to know more details, but my hourly rate stats at $35/hour. Thanks!',
@@ -56,7 +56,7 @@ mock.onGet('/api/chat/conversations').reply(200, {
           sender: {
             authUser: true,
             name: 'Lyu Zhihao',
-            avatar: '/images/avatars/avatar_11.png'
+            avatar: '/images/avatars/avatar_lvzhihao.jpg'
           },
           content:
             'Then why don\'t you make it if it\'s that easy? Sorry I\'m not interetes, have fantastic day Adam!',
@@ -103,7 +103,7 @@ mock.onGet('/api/chat/conversations').reply(200, {
           sender: {
             authUser: true,
             name: 'Lyu Zhihao',
-            avatar: '/images/avatars/avatar_11.png'
+            avatar: '/images/avatars/avatar_lvzhihao.jpg'
           },
           content: 'Hey, would you like to collaborate?',
           contentType: 'text',
@@ -149,7 +149,7 @@ mock.onGet('/api/chat/conversations').reply(200, {
           sender: {
             authUser: true,
             name: 'Lyu Zhihao',
-            avatar: '/images/avatars/avatar_11.png'
+            avatar: '/images/avatars/avatar_lvzhihao.jpg'
           },
           content: 'Oh, totally forgot about it',
           contentType: 'text',
@@ -162,7 +162,7 @@ mock.onGet('/api/chat/conversations').reply(200, {
           sender: {
             authUser: true,
             name: 'Lyu Zhihao',
-            avatar: '/images/avatars/avatar_11.png'
+            avatar: '/images/avatars/avatar_lvzhihao.jpg'
           },
           content: 'Alright then',
           contentType: 'text',
@@ -186,7 +186,7 @@ mock.onGet('/api/chat/conversations').reply(200, {
           sender: {
             authUser: true,
             name: 'Lyu Zhihao',
-            avatar: '/images/avatars/avatar_11.png'
+            avatar: '/images/avatars/avatar_lvzhihao.jpg'
           },
           content:
             'Hi Kwak! I\'ve seen your projects and we can work together on a project. Will send you the details later.',
@@ -222,7 +222,7 @@ mock.onGet('/api/chat/conversations').reply(200, {
           sender: {
             authUser: true,
             name: 'Lyu Zhihao',
-            avatar: '/images/avatars/avatar_11.png'
+            avatar: '/images/avatars/avatar_lvzhihao.jpg'
           },
           content: 'Did you receive my email about the brief?',
           contentType: 'text',
@@ -268,7 +268,7 @@ mock.onGet('/api/chat/conversations').reply(200, {
           sender: {
             authUser: true,
             name: 'Lyu Zhihao',
-            avatar: '/images/avatars/avatar_11.png'
+            avatar: '/images/avatars/avatar_lvzhihao.jpg'
           },
           content: 'Haha thank you Clarke, I\'m doing our best',
           contentType: 'text',
@@ -360,7 +360,7 @@ mock.onGet('/api/chat/activity').reply(200, {
     {
       id: uuid(),
       name: 'Lyu Zhihao',
-      avatar: '/images/avatars/avatar_11.png',
+      avatar: '/images/avatars/avatar_lvzhihao.jpg',
       active: true,
       lastActivity: moment(),
       group: 'friends'

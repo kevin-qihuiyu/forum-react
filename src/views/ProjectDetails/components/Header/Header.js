@@ -61,7 +61,7 @@ const Header = props => {
             gutterBottom
             variant="overline"
           >
-            Browse jobs
+            浏览职位
           </Typography>
           <Typography
             component="h1"

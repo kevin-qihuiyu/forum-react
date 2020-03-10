@@ -114,8 +114,8 @@ const Header = props => {
 
   const user = {
     name: 'Lyu Zhihao',
-    bio: 'Web Developer',
-    avatar: '/images/avatars/avatar_11.png',
+    bio: '项目经理',
+    avatar: '/images/avatars/avatar_lvzhihao.jpg',
     cover: '/images/covers/cover_2.jpg',
     connectedStatus: 'not_connected'
   };
@@ -163,51 +163,11 @@ const Header = props => {
           src={user.avatar}
         />
         <div className={classes.details}>
-          <Typography
-            component="h2"
-            gutterBottom
-            variant="overline"
-          >
-            {user.bio}
-          </Typography>
-          <Typography
-            component="h1"
-            variant="h4"
-          >
-            {user.name}
-          </Typography>
+          <Typography component="h1" gutterBottom variant="h4" > {user.name} </Typography>
+          <Typography component="h2" gutterBottom variant="overline"> {user.bio}</Typography>
         </div>
         <Hidden smDown>
           <div className={classes.actions}>
-            <Button
-              color="secondary"
-              component={RouterLink}
-              to="/chat"
-              variant="contained"
-            >
-              <ChatIcon className={classes.mailIcon} />
-              Send message
-            </Button>
-            {connectedStatus === 'not_connected' && (
-              <Button
-                color="primary"
-                onClick={handleConnectToggle}
-                variant="contained"
-              >
-                <PersonAddIcon className={classes.personAddIcon} />
-                Add connection
-              </Button>
-            )}
-            {connectedStatus === 'pending' && (
-              <Button
-                className={classes.pendingButton}
-                onClick={handleConnectToggle}
-                variant="contained"
-              >
-                <PersonAddIcon className={classes.personAddIcon} />
-                Pending connection
-              </Button>
-            )}
             <Tooltip title="More options">
               <IconButton>
                 <MoreIcon />

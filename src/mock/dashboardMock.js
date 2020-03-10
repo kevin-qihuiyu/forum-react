@@ -332,7 +332,7 @@ mock.onGet('/api/dashboard/latest-projects').reply(200, {
       currency: '$',
       author: {
         name: 'Lyu Zhihao',
-        avatar: '/images/avatars/avatar_11.png'
+        avatar: '/images/avatars/avatar_lvzhihao.jpg'
       },
       tags: [
         {
