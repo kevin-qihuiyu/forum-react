@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
-import { Typography, Grid, Button, Hidden } from '@material-ui/core';
+import { Typography, Grid, Button, Hidden, Avatar } from '@material-ui/core';
 import BarChartIcon from '@material-ui/icons/BarChart';
 
 const useStyles = makeStyles(theme => ({
@@ -17,7 +17,12 @@ const useStyles = makeStyles(theme => ({
   image: {
     width: '100%',
     maxHeight: 400
-  }
+  },
+  avatar: {
+    width: 60,
+    height: 60,
+    'margin-bottom': 15
+  },
 }));
 
 const Header = props => {
@@ -42,6 +47,13 @@ const Header = props => {
           md={6}
           xs={12}
         >
+          <Hidden smUp>
+            <Avatar
+              alt="Person"
+              className={classes.avatar}
+              src={session.user.avatar}
+            />
+          </Hidden>
           <Typography
             component="h2"
             gutterBottom
@@ -71,7 +83,7 @@ const Header = props => {
             我的简历
           </Button>
         </Grid>
-        <Hidden smDown>
+        {/* <Hidden smDown> */}
           <Grid
             item
             md={6}
@@ -83,7 +95,7 @@ const Header = props => {
               src="/images/job_search.png"
             />
           </Grid>
-        </Hidden>
+        {/* </Hidden> */}
       </Grid>
     </div>
   );
