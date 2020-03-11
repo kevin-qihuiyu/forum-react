@@ -95,7 +95,7 @@ const ProjectCard = props => {
               color="textPrimary"
               component={RouterLink}
               noWrap
-              to="#"
+              to="/projects/1/overview"
               variant="h5"
             >
               {project.title}
@@ -144,6 +144,7 @@ const ProjectCard = props => {
             color="primary"
             size="small"
             variant="outlined"
+            component={RouterLink} to="/projects/1/overview"
           >
             查看职位
           </Button>

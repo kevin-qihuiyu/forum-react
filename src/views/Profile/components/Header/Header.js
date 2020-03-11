@@ -148,13 +148,13 @@ const Header = props => {
         className={classes.cover}
         style={{ backgroundImage: `url(${user.cover})` }}
       >
-        <Button
+        {/* <Button
           className={classes.changeButton}
           variant="contained"
         >
           <AddPhotoIcon className={classes.addPhotoIcon} />
           Change Cover
-        </Button>
+        </Button> */}
       </div>
       <div className={classes.container}>
         <Avatar

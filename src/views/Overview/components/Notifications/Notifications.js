@@ -38,20 +38,20 @@ const Notifications = props => {
       id: uuid(),
       value: 6,
       type: 'invite',
-      message: 'to send service quotes'
+      message: '来自正在招聘的公司'
     },
     {
       id: uuid(),
       value: 2,
       type: 'message',
-      message: 'from clients'
+      message: '来自已投递的简历'
     },
-    {
-      id: uuid(),
-      value: 1,
-      type: 'payout',
-      message: 'that needs your confirmation'
-    }
+    // {
+    //   id: uuid(),
+    //   value: 1,
+    //   type: 'payout',
+    //   message: 'that needs your confirmation'
+    // }
   ];
 
   const icons = {

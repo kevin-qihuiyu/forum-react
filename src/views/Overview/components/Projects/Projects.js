@@ -72,7 +72,7 @@ const Projects = props => {
         </Typography>
         <Button
           component={RouterLink}
-          to="/profile/user/projects"
+          to="/profile/1/favoriteJobs"
         >
           查看全部
           <KeyboardArrowRightIcon className={classes.arrowIcon} />

@@ -70,10 +70,7 @@ const AppliedJobs = props => {
         >
           已申请职位
         </Typography>
-        <Button
-          component={RouterLink}
-          to="/profile/user/projects"
-        >
+        <Button component={RouterLink} to="/profile/1/appliedJobs" >
           查看全部
           <KeyboardArrowRightIcon className={classes.arrowIcon} />
         </Button>
