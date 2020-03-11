@@ -32,14 +32,14 @@ mock.onGet('/api/account/projects').reply(200, {
   projects: [
     {
       id: uuid(),
-      title: 'Mella Full Screen Slider',
-      price: '3K - 6K',
+      title: '项目经理助理',
+      price: '7K - 9K',
       currency: '$',
       type: 'Full-Time',
-      location: 'Europe',
+      location: '中国深圳',
       author: {
-        name: 'Anje Keizer',
-        avatar: '/images/avatars/avatar_5.png'
+        name: '小米中国',
+        avatar: '/images/avatars/xiaomi.png'
       },
       tags: [
         {

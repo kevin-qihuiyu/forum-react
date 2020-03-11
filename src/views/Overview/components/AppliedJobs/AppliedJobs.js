@@ -34,7 +34,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const Projects = props => {
+const AppliedJobs = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -68,7 +68,7 @@ const Projects = props => {
           className={classes.title}
           variant="h5"
         >
-          收藏的职位
+          已申请职位
         </Typography>
         <Button
           component={RouterLink}
@@ -88,8 +88,8 @@ const Projects = props => {
   );
 };
 
-Projects.propTypes = {
+AppliedJobs.propTypes = {
   className: PropTypes.string
 };
 
-export default Projects;
+export default AppliedJobs;

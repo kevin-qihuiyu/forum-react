@@ -279,7 +279,7 @@ mock.onGet('/api/dashboard/latest-projects').reply(200, {
   projects: [
     {
       id: uuid(),
-      title: 'Mella Full Screen Slider',
+      title: '项目经理助理',
       price: '12,500',
       currency: '$',
       author: {
@@ -295,7 +295,7 @@ mock.onGet('/api/dashboard/latest-projects').reply(200, {
     },
     {
       id: uuid(),
-      title: 'Dashboard Design',
+      title: '风控管理',
       price: '15,750',
       currency: '$',
       author: {
@@ -311,7 +311,7 @@ mock.onGet('/api/dashboard/latest-projects').reply(200, {
     },
     {
       id: uuid(),
-      title: 'Ten80 Web Design',
+      title: '证券研究员(量化方向)',
       price: '15,750',
       currency: '$',
       author: {

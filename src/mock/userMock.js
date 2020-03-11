@@ -83,15 +83,15 @@ mock.onGet('/api/users/1/projects').reply(200, {
   projects: [
     {
       id: uuid(),
-      title: 'Mella Full Screen Slider',
+      title: '项目经理助理',
       author: {
-        name: 'Anje Keizer',
-        avatar: '/images/avatars/avatar_5.png'
+        name: '中建阿尔及利亚',
+        avatar: '/images/avatars/cscec.png'
       },
-      price: '12,500',
+      price: '17-30万',
       currency: '$',
       type: 'Full-Time',
-      location: 'Europe',
+      location: '阿尔及利亚',
       tags: [
         {
           text: 'Angular JS',
@@ -102,15 +102,15 @@ mock.onGet('/api/users/1/projects').reply(200, {
     },
     {
       id: uuid(),
-      title: 'Dashboard Design',
+      title: '初级风控管理分析师',
       author: {
-        name: 'Devias IO',
+        name: 'Devias Investment',
         avatar: ''
       },
-      price: '15,750',
+      price: '15-18万',
       currency: '$',
       type: 'Full-Time',
-      location: 'Europe',
+      location: '法国巴黎',
       tags: [
         {
           text: 'React JS',
@@ -121,15 +121,15 @@ mock.onGet('/api/users/1/projects').reply(200, {
     },
     {
       id: uuid(),
-      title: 'Ten80 Web Design',
+      title: '证券研究员(量化方向)',
       author: {
-        name: 'Devias IO',
+        name: 'Devias Investments',
         avatar: ''
       },
-      price: '15,750',
+      price: '17-25万',
       currency: '$',
       type: 'Full-Time',
-      location: 'Europe',
+      location: '法国巴黎',
       tags: [
         {
           text: 'Vue JS',
@@ -153,7 +153,7 @@ mock.onGet('/api/users/1/reviews').reply(200, {
         avatar: '/images/avatars/avatar_2.png'
       },
       project: {
-        title: 'Mella Full Screen Slider',
+        title: '项目经理助理',
         price: '5,240.00'
       },
       pricePerHour: '43.00',
@@ -169,7 +169,7 @@ mock.onGet('/api/users/1/reviews').reply(200, {
         avatar: '/images/avatars/avatar_3.png'
       },
       project: {
-        title: 'Dashboard Design',
+        title: '风控管理',
         price: '3,680.00'
       },
       pricePerHour: '38.00',

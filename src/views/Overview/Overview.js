@@ -7,6 +7,7 @@ import {
   Statistics,
   Notifications,
   Projects,
+  AppliedJobs
 } from './components';
 
 const useStyles = makeStyles(theme => ({
@@ -39,6 +40,7 @@ const Overview = () => {
       <Statistics className={classes.statistics} />
       <Notifications className={classes.notifications} />
       <Projects className={classes.projects} />
+      <AppliedJobs className={classes.projects} />
     </Page>
   );
 };

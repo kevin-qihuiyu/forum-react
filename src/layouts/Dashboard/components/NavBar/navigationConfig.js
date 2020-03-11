@@ -32,11 +32,11 @@ export default [
           },
           {
             title: '收藏的职位',
-            href: '/profile/1/projects'
+            href: '/profile/1/favoriteJobs'
           },
           {
             title: '投递过的职位',
-            href: '/profile/1/projects'
+            href: '/profile/1/appliedJobs'
           },
         ]
       },
@@ -77,24 +77,12 @@ export default [
         icon: BarChartIcon,
         children: [
           {
-            title: 'Customers',
-            href: '/management/customers'
-          },
-          {
-            title: 'Customer Details',
-            href: '/management/customers/1/summary'
-          },
-          {
-            title: 'Projects',
+            title: '已收藏的职位',
             href: '/management/projects'
           },
           {
-            title: 'Orders',
-            href: '/management/orders'
-          },
-          {
-            title: 'Order Details',
-            href: '/management/orders/1'
+            title: '已投递的职位',
+            href: '/management/appliedJobs'
           }
         ]
       },

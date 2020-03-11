@@ -37,7 +37,7 @@ const Header = props => {
             component="h1"
             variant="h3"
           >
-            已收藏的职位
+            已投递的职位
           </Typography>
         </Grid>
       </Grid>

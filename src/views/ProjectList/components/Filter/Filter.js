@@ -81,12 +81,11 @@ const Filter = props => {
 
   const [inputValue, setInputValue] = useState('');
   const [chips, setChips] = useState([
-    'Freelance',
-    'Full Time',
-    'Novice',
-    'Europe',
-    'Android',
-    'Web Developer'
+    'Forum快速通道',
+    '猎头直招',
+    '合伙人',
+    '核心职能',
+    '国企海外分部'
   ]);
 
   const handleInputChange = event => {

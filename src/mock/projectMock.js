@@ -17,7 +17,7 @@ mock.onGet('/api/projects').reply(200, {
       currency: '$',
       type: 'Full-Time',
       location: '阿尔及利亚',
-      status: 'In progress',
+      status: '已投递',
       members: 5,
       tags: [
         {
@@ -40,7 +40,7 @@ mock.onGet('/api/projects').reply(200, {
       currency: '$',
       type: 'Full-Time',
       location: 'Europe',
-      status: 'In progress',
+      status: '已投递',
       members: 3,
       tags: [
         {
@@ -63,7 +63,7 @@ mock.onGet('/api/projects').reply(200, {
       currency: '$',
       type: 'Full-Time',
       location: 'Europe',
-      status: 'Completed',
+      status: '已投递',
       members: 8,
       tags: [
         {
@@ -86,7 +86,7 @@ mock.onGet('/api/projects').reply(200, {
       currency: '$',
       type: 'Full-Time',
       location: 'Europe',
-      status: 'In progress',
+      status: '已投递',
       members: 10,
       tags: [
         {
@@ -109,7 +109,7 @@ mock.onGet('/api/projects').reply(200, {
       currency: '$',
       type: 'Full-Time',
       location: 'Europe',
-      status: 'Canceled',
+      status: '职位关闭',
       members: 2,
       tags: [
         {
@@ -136,7 +136,7 @@ mock.onGet('/api/projects').reply(200, {
       currency: '$',
       type: 'Full-Time',
       location: 'Europe',
-      status: 'Completed',
+      status: '已投递',
       members: 12,
       tags: [
         {
@@ -218,26 +218,26 @@ mock.onGet('/api/projects/1').reply(200, {
       }
     ],
     files: [
+      // {
+      //   id: uuid(),
+      //   name: 'example-project1.jpg',
+      //   url: '/images/projects/project_2.jpg',
+      //   mimeType: 'image/png',
+      //   size: 1024 * 1024 * 3
+      // },
       {
         id: uuid(),
-        name: 'example-project1.jpg',
-        url: '/images/projects/project_2.jpg',
-        mimeType: 'image/png',
-        size: 1024 * 1024 * 3
-      },
-      {
-        id: uuid(),
-        name: 'docs.zip',
+        name: '项目经理.pdf',
         url: '#',
-        mimeType: 'application/zip',
-        size: 1024 * 1024 * 25
+        mimeType: 'application/pdf',
+        size: 1024 * 1024 * 3.45
       },
       {
         id: uuid(),
-        name: 'example-project2.jpg',
+        name: '产品经理.png',
         url: '/images/projects/project_1.jpg',
         mimeType: 'image/png',
-        size: 1024 * 1024 * 2
+        size: 1024 * 1024 * 1.78
       }
     ],
     activities: [

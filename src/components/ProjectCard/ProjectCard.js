@@ -101,7 +101,7 @@ const ProjectCard = props => {
             >
               {project.author.name}
             </Link>{' '}
-            | Updated: {moment(project.updated_at).fromNow()}
+            {/* | Updated: {moment(project.updated_at).fromNow()} */}
           </Typography>
         }
         title={
@@ -121,11 +121,11 @@ const ProjectCard = props => {
             colo="textSecondary"
             variant="subtitle2"
           >
-            We're looking for experienced Developers and Product Designers to
-            come aboard and help us build succesful businesses through softare.
+            We're looking for experienced collaborators to
+            come aboard and help us build succesful businesses.
           </Typography>
         </div>
-        <div className={classes.tags}>
+        {/* <div className={classes.tags}>
           {project.tags.map(tag => (
             <Label
               color={tag.color}
@@ -134,7 +134,7 @@ const ProjectCard = props => {
               {tag.text}
             </Label>
           ))}
-        </div>
+        </div> */}
         <Divider />
         <div className={classes.details}>
           <Grid

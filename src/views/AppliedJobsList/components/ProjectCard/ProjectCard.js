@@ -71,7 +71,9 @@ const ProjectCard = props => {
   const statusColors = {
     'In progress': colors.orange[600],
     Canceled: colors.grey[600],
-    Completed: colors.green[600]
+    Completed: colors.green[600],
+    '职位关闭': colors.grey[600],
+    '已投递': colors.green[600]
   };
 
   return (
@@ -113,26 +115,30 @@ const ProjectCard = props => {
         </div>
         <div className={classes.stats}>
           <Typography variant="h6">
-            {project.currency}
+            {/* {project.currency} */}
             {project.price}
           </Typography>
           <Typography variant="body2">薪资</Typography>
         </div>
+        {/* <div className={classes.stats}>
+          <Typography variant="h6">{project.members}</Typography>
+          <Typography variant="body2">招聘人数</Typography>
+        </div> */}
         <div className={classes.stats}>
           <Typography variant="h6">
-            {moment(project.end_date).format('DD MMMM YYYY')}
+            {moment(project.start_date).format('DD MMMM YYYY')}
           </Typography>
           <Typography variant="body2">截止时间</Typography>
         </div>
-        {/* <div className={classes.stats}>
+        <div className={classes.stats}>
           <Typography
             style={{ color: statusColors[project.status] }}
             variant="h6"
           >
             {project.status}
           </Typography>
-          <Typography variant="body2">Project status</Typography>
-        </div> */}
+          <Typography variant="body2">招聘进度</Typography>
+        </div>
         <div className={classes.actions}>
           <Button
             color="primary"

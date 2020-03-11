@@ -15,7 +15,7 @@ const routes = [
   {
     path: '/',
     exact: true,
-    component: () => <Redirect to="/presentation" />
+    component: () => <Redirect to="/overview" />
   },
   {
     path: '/auth',
@@ -93,6 +93,11 @@ const routes = [
         path: '/management/projects',
         exact: true,
         component: lazy(() => import('views/ProjectManagementList'))
+      },
+      {
+        path: '/management/appliedJobs',
+        exact: true,
+        component: lazy(() => import('views/AppliedJobsList'))
       },
       {
         path: '/management/orders',

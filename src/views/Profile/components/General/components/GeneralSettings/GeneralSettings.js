@@ -66,7 +66,8 @@ const GeneralSettings = props => {
     setOpenSnackbar(false);
   };
 
-  const states = ['Alabama', 'New York', 'San Francisco'];
+  const states = ['巴黎地区', '里昂', '尼斯', '波尔多', '南特', '其他'];
+  // const states = ['巴黎地区', '法国外省', '中国上海', '中国北京', '中国深圳', '中国广州'];
 
   return (
     <Card
@@ -188,9 +189,9 @@ const GeneralSettings = props => {
               md={6}
               xs={12}
             >
-              <Typography variant="h6">向企业展示您的简历</Typography>
+              <Typography variant="h6">加入我们的人才库</Typography>
               <Typography variant="body2">
-                如果选择打开，您的联系方式和公开简历将会进入我们的人才库，能够被企业直接看到。
+                如果选择打开，您的联系方式和主要简历将能够被企业直接看到。
               </Typography>
               <Switch
                 checked={values.isPublic}
