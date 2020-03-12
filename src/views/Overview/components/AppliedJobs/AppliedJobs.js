@@ -7,7 +7,7 @@ import { Typography, Button } from '@material-ui/core';
 import KeyboardArrowRightIcon from '@material-ui/icons/KeyboardArrowRight';
 
 import axios from 'utils/axios';
-import { ProjectCard } from 'components';
+import { JobCard } from 'components';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -38,20 +38,20 @@ const AppliedJobs = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
-  const [projects, setProjects] = useState([]);
+  const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
     let mounted = true;
 
-    const fetchProjects = () => {
-      axios.get('/api/account/projects').then(response => {
+    const fetchJobs = () => {
+      axios.get('/api/account/jobs').then(response => {
         if (mounted) {
-          setProjects(response.data.projects);
+          setJobs(response.data.jobs);
         }
       });
     };
 
-    fetchProjects();
+    fetchJobs();
 
     return () => {
       mounted = false;
@@ -75,10 +75,10 @@ const AppliedJobs = props => {
           <KeyboardArrowRightIcon className={classes.arrowIcon} />
         </Button>
       </div>
-      {projects.map(project => (
-        <ProjectCard
-          key={project.id}
-          project={project}
+      {jobs.map(job => (
+        <JobCard
+          key={job.id}
+          job={job}
         />
       ))}
     </div>

@@ -16,7 +16,7 @@ mock.onGet('/api/users/1/posts').reply(200, {
         name: 'Lyu Zhihao',
         avatar: '/images/avatars/avatar_lvzhihao.jpg'
       },
-      message: 'Just made this home screen for a project, what-cha thinkin?',
+      message: 'Just made this home screen for a job, what-cha thinkin?',
       media: '/images/posts/post_1.jpg',
       liked: true,
       likes: 24,
@@ -79,8 +79,8 @@ mock.onGet('/api/users/1/posts').reply(200, {
   ]
 });
 
-mock.onGet('/api/users/1/projects').reply(200, {
-  projects: [
+mock.onGet('/api/users/1/jobs').reply(200, {
+  jobs: [
     {
       id: uuid(),
       title: '项目经理助理',
@@ -147,12 +147,12 @@ mock.onGet('/api/users/1/reviews').reply(200, {
       id: uuid(),
       rating: 4,
       message:
-        'Shen was really great during the all time session we created the project',
+        'Shen was really great during the all time session we created the job',
       reviewer: {
         name: 'Ekaterina Tankova',
         avatar: '/images/avatars/avatar_2.png'
       },
-      project: {
+      job: {
         title: '项目经理助理',
         price: '5,240.00'
       },
@@ -168,7 +168,7 @@ mock.onGet('/api/users/1/reviews').reply(200, {
         name: 'Cao Yu',
         avatar: '/images/avatars/avatar_3.png'
       },
-      project: {
+      job: {
         title: '风控管理',
         price: '3,680.00'
       },

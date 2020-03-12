@@ -10,7 +10,8 @@ import { FileCard } from './components';
 const useStyles = makeStyles(theme => ({
   root: {},
   files: {
-    marginTop: theme.spacing(3)
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2)
   }
 }));
 

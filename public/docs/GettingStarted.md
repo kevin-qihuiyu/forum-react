@@ -1,6 +1,6 @@
 ### Introduction
 
-We like to think that Devias Kit Pro is more of a starter kit or the foundation to build your project upon. Devias Kit Pro is written in React with hooks that uses some really important technologies:
+We like to think that Devias Kit Pro is more of a starter kit or the foundation to build your job upon. Devias Kit Pro is written in React with hooks that uses some really important technologies:
 
 ##### Material-UI
 
@@ -27,7 +27,7 @@ We use <a href="https://yarnpkg.com/en/" target="_blank">Yarn</a> to install and
 
 ##### B. Installing Devias Kit Pro
 
-1. Unzip the zip file that you have downloaded from Material-Ui. Inside the zip file, you will find the the source file (exactly this demo project) (react-material-kit-pro-x.x.x-.zip) and design folder where you will find two more folders for figma and sketch source files.
+1. Unzip the zip file that you have downloaded from Material-Ui. Inside the zip file, you will find the the source file (exactly this demo job) (react-material-kit-pro-x.x.x-.zip) and design folder where you will find two more folders for figma and sketch source files.
 2. Extract the contents of the zip file (react-material-kit-pro-x.x.x-.zip) into a folder that you will work within. For this documentation, we will refer that as "your work folder".
 3. Open your machine console application (Terminal, Command Prompt etc.), navigate into your work folder and run the following command and wait for it to finish:
 

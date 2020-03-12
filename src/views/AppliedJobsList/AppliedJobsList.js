@@ -4,7 +4,7 @@ import { Typography } from '@material-ui/core';
 
 import axios from 'utils/axios';
 import { Page, Paginate, SearchBar } from 'components';
-import { Header, ProjectCard } from './components';
+import { Header, JobCard } from './components';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -24,20 +24,20 @@ const AppliedJobsList = () => {
   const classes = useStyles();
   const [rowsPerPage] = useState(10);
   const [page] = useState(0);
-  const [projects, setProjects] = useState([]);
+  const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
     let mounted = true;
 
-    const fetchProjects = () => {
-      axios.get('/api/projects').then(response => {
+    const fetchJobs = () => {
+      axios.get('/api/jobs').then(response => {
         if (mounted) {
-          setProjects(response.data.projects);
+          setJobs(response.data.jobs);
         }
       });
     };
 
-    fetchProjects();
+    fetchJobs();
 
     return () => {
       mounted = false;
@@ -63,13 +63,13 @@ const AppliedJobsList = () => {
           gutterBottom
           variant="body2"
         >
-          {projects.length} Records found. Page {page + 1} of{' '}
-          {Math.ceil(projects.length / rowsPerPage)}
+          {jobs.length} Records found. Page {page + 1} of{' '}
+          {Math.ceil(jobs.length / rowsPerPage)}
         </Typography>
-        {projects.map(project => (
-          <ProjectCard
-            key={project.id}
-            project={project}
+        {jobs.map(job => (
+          <JobCard
+            key={job.id}
+            job={job}
           />
         ))}
       </div>

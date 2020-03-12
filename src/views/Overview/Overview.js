@@ -6,7 +6,7 @@ import {
   Header,
   Statistics,
   Notifications,
-  Projects,
+  BookmarkedJobs,
   AppliedJobs
 } from './components';
 
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
   notifications: {
     marginTop: theme.spacing(6)
   },
-  projects: {
+  jobs: {
     marginTop: theme.spacing(6)
   },
 }));
@@ -39,8 +39,8 @@ const Overview = () => {
       <Header />
       <Statistics className={classes.statistics} />
       <Notifications className={classes.notifications} />
-      <Projects className={classes.projects} />
-      <AppliedJobs className={classes.projects} />
+      <BookmarkedJobs className={classes.jobs} />
+      <AppliedJobs className={classes.jobs} />
     </Page>
   );
 };

@@ -14,7 +14,7 @@ export { default as Page } from './Page';
 export { default as Paginate } from './Paginate';
 export { default as PostCard } from './PostCard';
 export { default as PricingModal } from './PricingModal';
-export { default as ProjectCard } from './ProjectCard';
+export { default as JobCard } from './JobCard';
 export { default as ReviewStars } from './ReviewStars';
 export { default as RichEditor } from './RichEditor';
 export { default as ScrollReset } from './ScrollReset';

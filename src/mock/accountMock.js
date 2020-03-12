@@ -28,8 +28,8 @@ mock.onGet('/api/account/statistics').reply(200, {
   }
 });
 
-mock.onGet('/api/account/projects').reply(200, {
-  projects: [
+mock.onGet('/api/account/jobs').reply(200, {
+  jobs: [
     {
       id: uuid(),
       title: '项目经理助理',
@@ -82,7 +82,7 @@ mock.onGet('/api/account/todos').reply(200, {
     },
     {
       id: uuid(),
-      title: 'Send proposal for the fintech project',
+      title: 'Send proposal for the fintech job',
       deadline: moment().add(5, 'days'),
       done: false
     },
@@ -113,7 +113,7 @@ mock.onGet('/api/account/notifications').reply(200, {
     {
       id: uuid(),
       title: 'Project has been approved',
-      type: 'project',
+      type: 'job',
       created_at: moment().subtract(3, 'days')
     },
     {

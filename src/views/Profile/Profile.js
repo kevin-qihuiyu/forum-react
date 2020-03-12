@@ -7,7 +7,7 @@ import { Tabs, Tab, Divider, colors } from '@material-ui/core';
 import axios from 'utils/axios';
 
 import { Page } from 'components';
-import { Header, Projects, General, Files } from './components';
+import { Header, Jobs, General, Files } from './components';
 
 const useStyles = makeStyles(theme => ({
   root: {},
@@ -30,20 +30,20 @@ const Profile = props => {
   const classes = useStyles();
   const { id, tab } = match.params;
 
-  const [project, setProject] = useState(null);
+  const [job, setJob] = useState(null);
 
   useEffect(() => {
     let mounted = true;
 
-    const fetchProject = () => {
-      axios.get('/api/projects/1').then(response => {
+    const fetchJob = () => {
+      axios.get('/api/jobs/1').then(response => {
         if (mounted) {
-          setProject(response.data.project);
+          setJob(response.data.job);
         }
       });
     };
 
-    fetchProject();
+    fetchJob();
 
     return () => {
       mounted = false;
@@ -67,6 +67,10 @@ const Profile = props => {
 
   if (!tabs.find(t => t.value === tab)) {
     return <Redirect to="/errors/error-404" />;
+  }
+
+  if (!job) {
+    return null;
   }
 
   return (
@@ -93,9 +97,9 @@ const Profile = props => {
         <Divider className={classes.divider} />
         <div className={classes.content}>
           {tab === 'general' && <General />}
-          {tab === 'cv' && <Files files={project.files} />}
-          {tab === 'favoriteJobs' && <Projects />}
-          {tab === 'appliedJobs' && <Projects />}
+          {tab === 'cv' && <Files files={job.files} />}
+          {tab === 'favoriteJobs' && <Jobs />}
+          {tab === 'appliedJobs' && <Jobs />}
         </div>
       </div>
     </Page>

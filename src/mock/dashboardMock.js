@@ -275,8 +275,8 @@ mock.onGet('/api/dashboard/latest-orders').reply(200, {
   ]
 });
 
-mock.onGet('/api/dashboard/latest-projects').reply(200, {
-  projects: [
+mock.onGet('/api/dashboard/latest-jobs').reply(200, {
+  jobs: [
     {
       id: uuid(),
       title: '项目经理助理',

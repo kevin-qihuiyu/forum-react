@@ -59,7 +59,7 @@ const NotificationList = props => {
         <PeopleIcon />
       </Avatar>
     ),
-    project: (
+    job: (
       <Avatar className={classes.avatarGreen}>
         <StoreIcon />
       </Avatar>

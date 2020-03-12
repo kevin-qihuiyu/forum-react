@@ -209,7 +209,7 @@ const GeneralSettings = props => {
               <Typography variant="h6">Available to hire</Typography>
               <Typography variant="body2">
                 Toggling this will let your teamates know that you are available
-                for acquireing new projects
+                for acquireing new jobs
               </Typography>
               <Switch
                 checked={values.canHire}

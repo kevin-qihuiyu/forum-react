@@ -63,9 +63,9 @@ const routes = [
     component: DashboardLayout,
     routes: [
       {
-        path: '/management/projects',
+        path: '/management/bookmarkedJobs',
         exact: true,
-        component: lazy(() => import('views/ProjectManagementList'))
+        component: lazy(() => import('views/BookmarkedJobList'))
       },
       {
         path: '/management/appliedJobs',
@@ -88,24 +88,24 @@ const routes = [
         component: lazy(() => import('views/Profile'))
       },
       {
-        path: '/projects/create',
+        path: '/jobs/create',
         exact: true,
-        component: lazy(() => import('views/ProjectCreate'))
+        component: lazy(() => import('views/JobCreate'))
       },
       {
-        path: '/projects/:id',
+        path: '/jobs/:id',
         exact: true,
-        component: lazy(() => import('views/ProjectDetails'))
+        component: lazy(() => import('views/JobDetails'))
       },
       {
-        path: '/projects/:id/:tab',
+        path: '/jobs/:id/:tab',
         exact: true,
-        component: lazy(() => import('views/ProjectDetails'))
+        component: lazy(() => import('views/JobDetails'))
       },
       {
-        path: '/projects',
+        path: '/jobs',
         exact: true,
-        component: lazy(() => import('views/ProjectList'))
+        component: lazy(() => import('views/JobList'))
       },
       {
         path: '/settings',

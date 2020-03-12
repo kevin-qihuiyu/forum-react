@@ -42,32 +42,32 @@ export default [
       },
       {
         title: '浏览职位',
-        href: '/projects',
+        href: '/jobs',
         icon: FolderIcon,
         children: [
           {
             title: '浏览职位',
-            href: '/projects'
-          },
-          {
-            title: 'Create',
-            href: '/projects/create'
+            href: '/jobs'
           },
           {
             title: '职位简介',
-            href: '/projects/1/overview'
+            href: '/jobs/1/overview'
           },
           {
             title: '公司简介',
-            href: '/projects/1/files'
+            href: '/jobs/1/files'
           },
           {
             title: '招聘流程',
-            href: '/projects/1/activity'
+            href: '/jobs/1/activity'
+          },
+          {
+            title: 'Create （企业）',
+            href: '/jobs/create'
           },
           // {
           //   title: 'Subscribers',
-          //   href: '/projects/1/subscribers'
+          //   href: '/jobs/1/subscribers'
           // }
         ]
       },
@@ -78,7 +78,7 @@ export default [
         children: [
           {
             title: '已收藏的职位',
-            href: '/management/projects'
+            href: '/management/bookmarkedJobs'
           },
           {
             title: '已投递的职位',

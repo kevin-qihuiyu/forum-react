@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link as RouterLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
@@ -78,6 +79,8 @@ const Header = props => {
             className={classes.summaryButton}
             edge="start"
             variant="contained"
+            component={RouterLink}
+            to="/profile/1/cv"
           >
             <BarChartIcon className={classes.barChartIcon} />
             我的简历
