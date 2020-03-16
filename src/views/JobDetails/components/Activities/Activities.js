@@ -53,12 +53,6 @@ const Activities = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <Typography
-        className={classes.title}
-        variant="h3"
-      >
-        Today
-      </Typography>
       <div className={classes.group}>
         {todayItems.map(activity => (
           <Activity
@@ -69,12 +63,6 @@ const Activities = props => {
         ))}
       </div>
       <div className={classes.group}>
-        <Typography
-          className={classes.title}
-          variant="h3"
-        >
-          Last week
-        </Typography>
         {lastWeekItems.map(activity => (
           <Activity
             activity={activity}

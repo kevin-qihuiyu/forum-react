@@ -243,79 +243,26 @@ mock.onGet('/api/jobs/1').reply(200, {
     activities: [
       {
         id: uuid(),
-        subject: 'Project owner',
+        subject: '投递已成功',
         subject_type: 'user',
         action_type: 'upload_file',
-        action_desc: 'has uploaded a new file',
+        action_desc: '您的投递已成功，请您耐心等待回复。',
         created_at: moment().subtract(23, 'minutes')
       },
       {
         id: uuid(),
-        subject: 'Adrian Stefan',
+        subject: '申请已处理',
         subject_type: 'user',
         action_type: 'join_team',
-        action_desc: 'joined team as a Front-End Developer',
+        action_desc: '您的申请已处理，请您查看邮箱等联系方式。',
         created_at: moment().subtract(2, 'hours')
       },
       {
         id: uuid(),
-        subject: 'Alexandru Robert',
-        action_type: 'join_team',
-        action_desc: 'joined team as a Full Stack Developer',
-        created_at: moment().subtract(9, 'hours')
-      },
-      {
-        id: uuid(),
-        subject: 'Project owner',
-        subject_type: 'user',
-        action_type: 'salary_change',
-        action_desc: 'raised the job budget',
-        created_at: moment().subtract(2, 'days')
-      },
-      {
-        id: uuid(),
-        subject: 'Contest',
-        subject_type: 'job',
+        subject: '职位已关闭',
         action_type: 'contest_created',
-        action_desc: 'created',
-        created_at: moment().subtract(4, 'days')
-      }
-    ],
-    subscribers: [
-      {
-        id: uuid(),
-        name: 'Ekaterina Tankova',
-        avatar: '/images/avatars/avatar_2.png',
-        cover: '/images/covers/cover_1.jpg',
-        common_connections: 12,
-        labels: [
-          'User Experience',
-          'FrontEnd development',
-          'HTML5',
-          'VueJS',
-          'ReactJS'
-        ]
-      },
-      {
-        id: uuid(),
-        name: 'Cao Yu',
-        avatar: '/images/avatars/avatar_3.png',
-        cover: '/images/covers/cover_2.jpg',
-        common_connections: 5,
-        labels: [
-          'User Interface',
-          'FullStack development',
-          'Angular',
-          'ExpressJS'
-        ]
-      },
-      {
-        id: uuid(),
-        name: 'Clarke Gillebert',
-        avatar: '/images/avatars/avatar_6.png',
-        cover: '/images/covers/cover_2.jpg',
-        common_connections: 17,
-        labels: ['BackEnd development', 'Firebase', 'MongoDB', 'ExpressJS']
+        action_desc: '职位已经关闭，感谢您的关注。',
+        created_at: moment().subtract(9, 'hours')
       }
     ],
     deadline: moment().add(7, 'days'),
