@@ -44,7 +44,7 @@ const AppliedJobs = props => {
     let mounted = true;
 
     const fetchJobs = () => {
-      axios.get('/api/account/jobs').then(response => {
+      axios.get('/api/users/1/appliedJobs').then(response => {
         if (mounted) {
           setJobs(response.data.jobs);
         }

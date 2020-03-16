@@ -63,7 +63,7 @@ const NavBar = props => {
           className={classes.avatar}
           component={RouterLink}
           src={session.user.avatar}
-          to="/profile/1/timeline"
+          to="/profile/1/general"
         />
         <Typography
           className={classes.name}

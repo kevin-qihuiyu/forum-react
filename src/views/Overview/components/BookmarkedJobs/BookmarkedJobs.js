@@ -44,7 +44,7 @@ const BookmarkedJobs = props => {
     let mounted = true;
 
     const fetchJobs = () => {
-      axios.get('/api/account/jobs').then(response => {
+      axios.get('/api/users/1/bookmarkedJobs').then(response => {
         if (mounted) {
           setJobs(response.data.jobs);
         }
@@ -72,7 +72,7 @@ const BookmarkedJobs = props => {
         </Typography>
         <Button
           component={RouterLink}
-          to="/profile/1/favoriteJobs"
+          to="/profile/1/bookmarkedJobs"
         >
           查看全部
           <KeyboardArrowRightIcon className={classes.arrowIcon} />

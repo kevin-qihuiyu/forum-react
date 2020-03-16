@@ -145,7 +145,7 @@ const JobCard = props => {
           >
             <Grid item>
               <Typography variant="body2">薪资</Typography>
-              <Typography variant="h5">{job.price}</Typography>
+              <Typography variant="h5">{job.salary}</Typography>
             </Grid>
             <Grid item>
               <Typography variant="body2">工作地点</Typography>

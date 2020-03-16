@@ -162,8 +162,8 @@ const TopBar = props => {
   };
 
   const popularSearches = [
-    'Devias React Dashboard',
-    'Devias',
+    'Forum Dashboard',
+    'AFCP',
     'Admin Pannel',
     'Project',
     'Pages'
@@ -180,6 +180,7 @@ const TopBar = props => {
           <img
             alt="Logo"
             src="/images/logos/forum--tmp.png"
+            style={{maxWidth:240, objectFit: 'contain'}}
             // src="/images/logos/logo--white.svg"
           />
         </RouterLink>

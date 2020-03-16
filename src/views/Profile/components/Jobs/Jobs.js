@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/styles';
 import { Grid } from '@material-ui/core';
 
-import axios from 'utils/axios';
 import { JobCard } from 'components';
 
 const useStyles = makeStyles(() => ({
@@ -12,28 +11,9 @@ const useStyles = makeStyles(() => ({
 }));
 
 const Jobs = props => {
-  const { className, ...rest } = props;
+  const { jobs, className, ...rest } = props;
 
   const classes = useStyles();
-  const [jobs, setJobs] = useState([]);
-
-  useEffect(() => {
-    let mounted = true;
-
-    const fetchJobs = () => {
-      if (mounted) {
-        axios
-          .get('/api/users/1/jobs')
-          .then(response => setJobs(response.data.jobs));
-      }
-    };
-
-    fetchJobs();
-
-    return () => {
-      mounted = false;
-    };
-  }, []);
 
   return (
     <div

@@ -116,7 +116,7 @@ const JobCard = props => {
         <div className={classes.stats}>
           <Typography variant="h6">
             {/* {job.currency} */}
-            {job.price}
+            {job.salary}
           </Typography>
           <Typography variant="body2">薪资</Typography>
         </div>

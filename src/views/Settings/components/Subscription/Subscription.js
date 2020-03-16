@@ -110,7 +110,7 @@ const Subscription = props => {
                 variant="h4"
               >
                 {subscription.currency}
-                {subscription.price}
+                {subscription.salary}
               </Typography>
               <Typography
                 display="inline"

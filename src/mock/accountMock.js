@@ -28,73 +28,6 @@ mock.onGet('/api/account/statistics').reply(200, {
   }
 });
 
-mock.onGet('/api/account/jobs').reply(200, {
-  jobs: [
-    {
-      id: uuid(),
-      title: '项目经理助理',
-      price: '7K - 9K',
-      currency: '$',
-      type: 'Full-Time',
-      location: '中国深圳',
-      author: {
-        name: '小米中国',
-        avatar: '/images/avatars/xiaomi.png'
-      },
-      tags: [
-        {
-          id: uuid(),
-          text: 'Vue JS',
-          color: colors.green[600]
-        }
-      ],
-      updated_at: moment().subtract(24, 'minutes')
-    }
-  ]
-});
-
-mock.onGet('/api/account/todos').reply(200, {
-  todos: [
-    {
-      id: uuid(),
-      title: 'Finish the proposal design and contract for the client ASAP',
-      deadline: moment().subtract(2, 'days'),
-      done: false
-    },
-    {
-      id: uuid(),
-      title: 'Finish the proposal design and contract for the client ASAP',
-      deadline: moment(),
-      done: false
-    },
-    {
-      id: uuid(),
-      title:
-        'Upload the files for the client @Adrian Stefan with the fonts, assets exported and all the fancy svgs',
-      deadline: moment().add(2, 'days'),
-      done: false
-    },
-    {
-      id: uuid(),
-      title: 'Re-write the card component with hooks and context',
-      deadline: moment().add(5, 'days'),
-      done: false
-    },
-    {
-      id: uuid(),
-      title: 'Send proposal for the fintech job',
-      deadline: moment().add(5, 'days'),
-      done: false
-    },
-    {
-      id: uuid(),
-      title:
-        'Create todo app with react hooks just to get a better understanding of the concept',
-      deadline: moment().add(7, 'days'),
-      done: true
-    }
-  ]
-});
 
 mock.onGet('/api/account/notifications').reply(200, {
   notifications: [
@@ -128,7 +61,7 @@ mock.onGet('/api/account/notifications').reply(200, {
 mock.onGet('/api/account/subscription').reply(200, {
   subscription: {
     name: 'Freelancer',
-    price: '5',
+    salary: '5',
     currency: '$',
     proposalsLeft: 12,
     templatesLeft: 5,
@@ -142,3 +75,47 @@ mock.onGet('/api/account/subscription').reply(200, {
 mock.onGet('/api/account/settings').reply(200, {
   settings: {}
 });
+
+
+// mock.onGet('/api/account/todos').reply(200, {
+//   todos: [
+//     {
+//       id: uuid(),
+//       title: 'Finish the proposal design and contract for the client ASAP',
+//       deadline: moment().subtract(2, 'days'),
+//       done: false
+//     },
+//     {
+//       id: uuid(),
+//       title: 'Finish the proposal design and contract for the client ASAP',
+//       deadline: moment(),
+//       done: false
+//     },
+//     {
+//       id: uuid(),
+//       title:
+//         'Upload the files for the client @Adrian Stefan with the fonts, assets exported and all the fancy svgs',
+//       deadline: moment().add(2, 'days'),
+//       done: false
+//     },
+//     {
+//       id: uuid(),
+//       title: 'Re-write the card component with hooks and context',
+//       deadline: moment().add(5, 'days'),
+//       done: false
+//     },
+//     {
+//       id: uuid(),
+//       title: 'Send proposal for the fintech job',
+//       deadline: moment().add(5, 'days'),
+//       done: false
+//     },
+//     {
+//       id: uuid(),
+//       title:
+//         'Create todo app with react hooks just to get a better understanding of the concept',
+//       deadline: moment().add(7, 'days'),
+//       done: true
+//     }
+//   ]
+// });

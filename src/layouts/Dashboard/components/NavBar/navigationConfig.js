@@ -32,7 +32,7 @@ export default [
           },
           {
             title: '收藏的职位',
-            href: '/profile/1/favoriteJobs'
+            href: '/profile/1/bookmarkedJobs'
           },
           {
             title: '投递过的职位',

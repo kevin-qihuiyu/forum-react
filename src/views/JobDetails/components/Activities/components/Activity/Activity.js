@@ -58,7 +58,7 @@ const Activity = props => {
         <PersonAddIcon />
       </Avatar>
     ),
-    price_change: (
+    salary_change: (
       <Avatar className={classes.avatarGreen}>
         <AttachMoneyIcon />
       </Avatar>

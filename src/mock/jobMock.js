@@ -13,7 +13,7 @@ mock.onGet('/api/jobs').reply(200, {
         name: '中建阿尔及利亚',
         avatar: '/images/avatars/cscec.png'
       },
-      price: '面议',
+      salary: '面议',
       currency: '$',
       type: 'Full-Time',
       location: '阿尔及利亚',
@@ -36,7 +36,7 @@ mock.onGet('/api/jobs').reply(200, {
         name: '中建阿尔及利亚',
         avatar: '/images/avatars/cscec.png'
       },
-      price: '面议',
+      salary: '面议',
       currency: '$',
       type: 'Full-Time',
       location: 'Europe',
@@ -59,7 +59,7 @@ mock.onGet('/api/jobs').reply(200, {
         name: '中建阿尔及利亚',
         avatar: '/images/avatars/cscec.png'
       },
-      price: '面议',
+      salary: '面议',
       currency: '$',
       type: 'Full-Time',
       location: 'Europe',
@@ -82,7 +82,7 @@ mock.onGet('/api/jobs').reply(200, {
         name: '施耐德电气',
         avatar: '/images/avatars/schneider.png'
       },
-      price: '15-25万/年',
+      salary: '15-25万/年',
       currency: '$',
       type: 'Full-Time',
       location: 'Europe',
@@ -105,7 +105,7 @@ mock.onGet('/api/jobs').reply(200, {
         name: '施耐德电气',
         avatar: '/images/avatars/schneider.png'
       },
-      price: '15-25万/年',
+      salary: '15-25万/年',
       currency: '$',
       type: 'Full-Time',
       location: 'Europe',
@@ -132,7 +132,7 @@ mock.onGet('/api/jobs').reply(200, {
         name: '小米法国',
         avatar: '/images/avatars/xiaomi.png'
       },
-      price: '面议',
+      salary: '面议',
       currency: '$',
       type: 'Full-Time',
       location: 'Europe',
@@ -189,7 +189,7 @@ mock.onGet('/api/jobs/1').reply(200, {
 7、态度积极主动，具备较强的工作压力承受能力
 
     `,
-    price: '25-35万',
+    salary: '25-35万',
     currency: 'CNY',
     tags: [
       {
@@ -268,7 +268,7 @@ mock.onGet('/api/jobs/1').reply(200, {
         id: uuid(),
         subject: 'Project owner',
         subject_type: 'user',
-        action_type: 'price_change',
+        action_type: 'salary_change',
         action_desc: 'raised the job budget',
         created_at: moment().subtract(2, 'days')
       },

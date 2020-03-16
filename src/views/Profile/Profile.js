@@ -30,20 +30,32 @@ const Profile = props => {
   const classes = useStyles();
   const { id, tab } = match.params;
 
-  const [job, setJob] = useState(null);
+  const [appliedJobs, setAppliedJobs] = useState(null);
+  const [bookmarkedJobs, setBookmarkedJobs] = useState(null);
+  const [files, setFiles] = useState(null);
 
   useEffect(() => {
     let mounted = true;
 
-    const fetchJob = () => {
-      axios.get('/api/jobs/1').then(response => {
+    const fetchInfos = () => {
+      axios.get('/api/users/1/files').then(response => {
         if (mounted) {
-          setJob(response.data.job);
+          setFiles(response.data.files);
+        }
+      });
+      axios.get('/api/users/1/appliedJobs').then(response => {
+        if (mounted) {
+          setAppliedJobs(response.data.jobs);
+        }
+      });
+      axios.get('/api/users/1/bookmarkedJobs').then(response => {
+        if (mounted) {
+          setBookmarkedJobs(response.data.jobs);
         }
       });
     };
 
-    fetchJob();
+    fetchInfos();
 
     return () => {
       mounted = false;
@@ -57,19 +69,19 @@ const Profile = props => {
   const tabs = [
     { value: 'general', label: '个人信息' },
     { value: 'cv', label: '简历管理' },
-    { value: 'favoriteJobs', label: '收藏的职位' },
+    { value: 'bookmarkedJobs', label: '收藏的职位' },
     { value: 'appliedJobs', label: '已投递的职位' }
   ];
 
   if (!tab) {
-    return <Redirect to={`/profile/${id}/timeline`} />;
+    return <Redirect to={`/profile/${id}/general`} />;
   }
 
   if (!tabs.find(t => t.value === tab)) {
     return <Redirect to="/errors/error-404" />;
   }
 
-  if (!job) {
+  if (!appliedJobs || !bookmarkedJobs || !files) {
     return null;
   }
 
@@ -97,9 +109,9 @@ const Profile = props => {
         <Divider className={classes.divider} />
         <div className={classes.content}>
           {tab === 'general' && <General />}
-          {tab === 'cv' && <Files files={job.files} />}
-          {tab === 'favoriteJobs' && <Jobs />}
-          {tab === 'appliedJobs' && <Jobs />}
+          {tab === 'cv' && <Files files={files} />}
+          {tab === 'bookmarkedJobs' && <Jobs jobs={appliedJobs} />}
+          {tab === 'appliedJobs' && <Jobs jobs={bookmarkedJobs} />}
         </div>
       </div>
     </Page>

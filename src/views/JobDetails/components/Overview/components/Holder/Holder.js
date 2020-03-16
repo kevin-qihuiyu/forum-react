@@ -92,7 +92,7 @@ const Holder = props => {
           >
             <Typography variant="subtitle2">薪资</Typography>
             <Typography variant="h6">
-              {job.price} {job.currency}
+              {job.salary} {job.currency}
             </Typography>
           </ListItem>
           <ListItem

@@ -8,117 +8,27 @@ mock.onGet('/api/users').reply(200, {
   users: []
 });
 
-mock.onGet('/api/users/1/posts').reply(200, {
-  posts: [
+mock.onGet('/api/users/1/files').reply(200, {
+  files: [
     {
       id: uuid(),
-      author: {
-        name: 'Lyu Zhihao',
-        avatar: '/images/avatars/avatar_lvzhihao.jpg'
-      },
-      message: 'Just made this home screen for a job, what-cha thinkin?',
-      media: '/images/posts/post_1.jpg',
-      liked: true,
-      likes: 24,
-      comments: [
-        {
-          id: uuid(),
-          author: {
-            name: 'Anje Keizer',
-            avatar: '/images/avatars/avatar_5.png'
-          },
-          message: 'Could use some more statistics, but that’s me haha',
-          created_at: moment().subtract(3, 'hours')
-        },
-        {
-          id: uuid(),
-          author: {
-            name: 'Ava Gregoraci',
-            avatar: '/images/avatars/avatar_8.png'
-          },
-          message:
-            'Hmm, honestly this looks nice but I would change the shadow though',
-          created_at: moment().subtract(2, 'hours')
-        }
-      ],
-      created_at: moment().subtract(4, 'hours')
+      name: '项目经理.pdf',
+      url: '#',
+      mimeType: 'application/pdf',
+      size: 1024 * 1024 * 3.45
     },
     {
       id: uuid(),
-      author: {
-        name: 'Lyu Zhihao',
-        avatar: '/images/avatars/avatar_lvzhihao.jpg'
-      },
-      message:
-        'As a human being, you are designed in a way that makes you incapable of experiencing any positive emotion unless you set an aim and progress towards it. What makes you happy is not, in fact, attaining it, but making progress towards it.',
-      liked: false,
-      likes: 65,
-      comments: [
-        {
-          id: uuid(),
-          author: {
-            name: 'Clarke Gillebert',
-            avatar: '/images/avatars/avatar_6.png'
-          },
-          message:
-            'That’s actually deep. Thanks for the design, would you consider making an interaction?',
-          created_at: moment().subtract(3, 'hours')
-        },
-        {
-          id: uuid(),
-          author: {
-            name: 'Alexa Richardson',
-            avatar: '/images/avatars/avatar_4.png'
-          },
-          message: 'It looks nice',
-          created_at: moment().subtract(2, 'hours')
-        }
-      ],
-      created_at: moment().subtract(7, 'hours')
+      name: '产品经理.png',
+      url: '/images/projects/project_1.jpg',
+      mimeType: 'image/png',
+      size: 1024 * 1024 * 1.78
     }
-  ]
-});
+  ],
+})
 
-mock.onGet('/api/users/1/jobs').reply(200, {
+mock.onGet('/api/users/1/appliedJobs').reply(200, {
   jobs: [
-    {
-      id: uuid(),
-      title: '项目经理助理',
-      author: {
-        name: '中建阿尔及利亚',
-        avatar: '/images/avatars/cscec.png'
-      },
-      price: '17-30万',
-      currency: '$',
-      type: 'Full-Time',
-      location: '阿尔及利亚',
-      tags: [
-        {
-          text: 'Angular JS',
-          color: colors.red[600]
-        }
-      ],
-      updated_at: moment().subtract(24, 'minutes')
-    },
-    {
-      id: uuid(),
-      title: '初级风控管理分析师',
-      author: {
-        name: 'Devias Investment',
-        avatar: ''
-      },
-      price: '15-18万',
-      currency: '$',
-      type: 'Full-Time',
-      location: '法国巴黎',
-      tags: [
-        {
-          text: 'React JS',
-          color: colors.indigo[600]
-        }
-      ],
-      updated_at: moment().subtract(1, 'hour')
-    },
     {
       id: uuid(),
       title: '证券研究员(量化方向)',
@@ -126,98 +36,81 @@ mock.onGet('/api/users/1/jobs').reply(200, {
         name: 'Devias Investments',
         avatar: ''
       },
-      price: '17-25万',
+      salary: '17-25万',
       currency: '$',
       type: 'Full-Time',
       location: '法国巴黎',
-      tags: [
-        {
-          text: 'Vue JS',
-          color: colors.green[600]
-        }
-      ],
       updated_at: moment().subtract(16, 'hour')
+    },
+    {
+      id: uuid(),
+      title: '项目经理助理',
+      salary: '7K - 9K',
+      currency: '$',
+      type: 'Full-Time',
+      location: '中国深圳',
+      author: {
+        name: '小米中国',
+        avatar: '/images/avatars/xiaomi.png'
+      },
+      // tags: [
+      //   {
+      //     id: uuid(),
+      //     text: 'Vue JS',
+      //     color: colors.green[600]
+      //   }
+      // ],
+      updated_at: moment().subtract(24, 'minutes')
     }
   ]
 });
 
-mock.onGet('/api/users/1/reviews').reply(200, {
-  reviews: [
+mock.onGet('/api/users/1/bookmarkedJobs').reply(200, {
+  jobs: [
     {
       id: uuid(),
-      rating: 4,
-      message:
-        'Shen was really great during the all time session we created the job',
-      reviewer: {
-        name: 'Ekaterina Tankova',
-        avatar: '/images/avatars/avatar_2.png'
+      title: '初级风控管理分析师',
+      author: {
+        name: 'Devias Investment',
+        avatar: ''
       },
-      job: {
-        title: '项目经理助理',
-        price: '5,240.00'
-      },
-      pricePerHour: '43.00',
-      hours: 31,
+      salary: '15-18万',
       currency: '$',
-      created_at: moment().subtract(4, 'hours')
+      type: 'Full-Time',
+      location: '法国巴黎',
+      // tags: [
+      //   {
+      //     text: 'Example tag',
+      //     color: colors.indigo[600]
+      //   }
+      // ],
+      updated_at: moment().subtract(1, 'hour')
     },
     {
       id: uuid(),
-      rating: 5,
-      reviewer: {
-        name: 'Cao Yu',
-        avatar: '/images/avatars/avatar_3.png'
+      title: '项目经理助理',
+      author: {
+        name: '中建阿尔及利亚',
+        avatar: '/images/avatars/cscec.png'
       },
-      job: {
-        title: '风控管理',
-        price: '3,680.00'
-      },
-      pricePerHour: '38.00',
-      hours: 76,
+      salary: '17-30万',
       currency: '$',
-      message:
-        'Being the savage\'s bowsman, that is, the person who pulled the bow-oar in his boat (the second one from forward), it was my cheerful duty to attend upon him while taking that hard-scrabble scramble upon the dead whale\'s back. You have seen Italian organ-boys holding a dancing-ape by a long cord. Just so, from the ship\'s steep side, did I hold Queequeg down there in the sea, by what is technically called in the fishery a monkey-rope, attached to a strong strip of canvas belted round his waist.',
-      created_at: moment().subtract(8, 'days')
-    }
-  ]
-});
-
-mock.onGet('/api/users/1/connections').reply(200, {
-  connections: [
-    {
-      id: uuid(),
-      name: 'Ekaterina Tankova',
-      avatar: '/images/avatars/avatar_2.png',
-      common: 12,
-      status: 'connected'
+      type: 'Full-Time',
+      location: '阿尔及利亚',
+      updated_at: moment().subtract(24, 'minutes')
     },
     {
       id: uuid(),
-      name: 'Cao Yu',
-      avatar: '/images/avatars/avatar_3.png',
-      common: 10,
-      status: 'rejected'
-    },
-    {
-      id: uuid(),
-      name: 'Alexa Richardson',
-      avatar: '/images/avatars/avatar_4.png',
-      common: 8,
-      status: 'pending'
-    },
-    {
-      id: uuid(),
-      name: 'Adam Denisov',
-      avatar: '/images/avatars/avatar_7.png',
-      common: 5,
-      status: 'not_connected'
-    },
-    {
-      id: uuid(),
-      name: 'Ava Gregoraci',
-      avatar: '/images/avatars/avatar_8.png',
-      common: 1,
-      status: 'connected'
+      title: '客户经理',
+      salary: '7K - 9K',
+      currency: '$',
+      type: 'Full-Time',
+      location: '中国深圳',
+      author: {
+        name: '小米中国',
+        avatar: '/images/avatars/xiaomi.png'
+      },
+      updated_at: moment().subtract(24, 'minutes')
     }
   ]
 });
