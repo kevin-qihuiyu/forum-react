@@ -26,7 +26,7 @@ const Topbar = props => {
         <RouterLink to="/">
           <img
             alt="Logo"
-            src="/images/logos/forum--tmp.png"
+            src="/images/logos/forum-logo-tmp.png"
           />
         </RouterLink>
       </Toolbar>
