@@ -49,7 +49,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const AboutProject = props => {
+const About = props => {
   const { className, ...rest } = props;
 
   const classes = useStyles();
@@ -57,13 +57,10 @@ const AboutProject = props => {
   const initialValues = {
     name: '',
     tag: '',
-    tags: ['Full-Time', 'ReactJS'],
-    startDate: moment(),
-    endDate: moment().add(1, 'day')
+    tags: ['Full-Time', 'Remote', 'Visa sponsorship'],
   };
 
   const [values, setValues] = useState({ ...initialValues });
-  const [calendarTrigger, setCalendarTrigger] = useState(null);
 
   const handleFieldChange = (event, field, value) => {
     event.persist && event.persist();
@@ -98,30 +95,6 @@ const AboutProject = props => {
     });
   };
 
-  const handleCalendarOpen = trigger => {
-    setCalendarTrigger(trigger);
-  };
-
-  const handleCalendarChange = () => {};
-
-  const handleCalendarAccept = date => {
-    setValues(values => ({
-      ...values,
-      [calendarTrigger]: date
-    }));
-  };
-
-  const handleCalendarClose = () => {
-    setCalendarTrigger(false);
-  };
-
-  const calendarOpen = Boolean(calendarTrigger);
-  const calendarMinDate =
-    calendarTrigger === 'startDate'
-      ? moment()
-      : moment(values.startDate).add(1, 'day');
-  const calendarValue = values[calendarTrigger];
-
   return (
     <Card
       {...rest}
@@ -132,12 +105,12 @@ const AboutProject = props => {
         <form>
           <Alert
             className={classes.alert}
-            message="Once you choose the job name you can’t change it unless you contact customer support."
+            message="Example message."
           />
           <div className={classes.formGroup}>
             <TextField
               fullWidth
-              label="Project Name"
+              label="Job Name"
               name="name"
               onChange={event =>
                 handleFieldChange(event, 'name', event.target.value)
@@ -150,7 +123,7 @@ const AboutProject = props => {
             <div className={classes.fieldGroup}>
               <TextField
                 className={classes.flexGrow}
-                label="Project Tags"
+                label="Job Tags"
                 name="tag"
                 onChange={event =>
                   handleFieldChange(event, 'tag', event.target.value)
@@ -185,44 +158,14 @@ const AboutProject = props => {
               ))}
             </div>
           </div>
-          <div className={classes.formGroup}>
-            <div className={classes.fieldGroup}>
-              <TextField
-                className={classes.dateField}
-                label="Start Date"
-                name="startDate"
-                onClick={() => handleCalendarOpen('startDate')}
-                value={moment(values.startDate).format('DD/MM/YYYY')}
-                variant="outlined"
-              />
-              <TextField
-                className={classes.dateField}
-                label="End Date"
-                name="endDate"
-                onClick={() => handleCalendarOpen('endDate')}
-                value={moment(values.endDate).format('DD/MM/YYYY')}
-                variant="outlined"
-              />
-            </div>
-          </div>
         </form>
       </CardContent>
-      <DatePicker
-        minDate={calendarMinDate}
-        onAccept={handleCalendarAccept}
-        onChange={handleCalendarChange}
-        onClose={handleCalendarClose}
-        open={calendarOpen}
-        style={{ display: 'none' }} // Temporal fix to hide the input element
-        value={calendarValue}
-        variant="dialog"
-      />
     </Card>
   );
 };
 
-AboutProject.propTypes = {
+About.propTypes = {
   className: PropTypes.string
 };
 
-export default AboutProject;
+export default About;

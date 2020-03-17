@@ -33,25 +33,25 @@ mock.onGet('/api/account/notifications').reply(200, {
   notifications: [
     {
       id: uuid(),
-      title: 'New order has been received',
+      title: '您申请的职位 施耐德 软件工程师 已提交成功。',
       type: 'order',
       created_at: moment().subtract(2, 'hours')
     },
     {
       id: uuid(),
-      title: 'New customer is registered',
+      title: '您申请的职位 中建阿尔及利亚 售前工程师 已处理。',
       type: 'user',
       created_at: moment().subtract(1, 'day')
     },
     {
       id: uuid(),
-      title: 'Project has been approved',
+      title: '您申请的职位 中建阿尔及利亚 建筑师 已关闭。',
       type: 'job',
       created_at: moment().subtract(3, 'days')
     },
     {
       id: uuid(),
-      title: 'New feature has been added',
+      title: '您申请的职位 小米法国 解决方案工程师 已处理。',
       type: 'feature',
       created_at: moment().subtract(7, 'days')
     }

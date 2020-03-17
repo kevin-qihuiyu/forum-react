@@ -55,7 +55,7 @@ export default [
           },
           {
             title: '公司简介',
-            href: '/jobs/1/files'
+            href: '/jobs/1/companyDetails'
           },
           {
             title: '招聘流程',

@@ -23,13 +23,13 @@ const Header = props => {
         gutterBottom
         variant="overline"
       >
-        New Project
+        New Job Description
       </Typography>
       <Typography
         component="h1"
         variant="h3"
       >
-        Apply for listing job
+        Create a new Job Description
       </Typography>
     </div>
   );

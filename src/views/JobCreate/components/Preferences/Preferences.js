@@ -36,7 +36,7 @@ const Preferences = props => {
           gutterBottom
           variant="h6"
         >
-          Privacy
+          Options
         </Typography>
         <Typography variant="body2">
           You will recieve emails in your business email address
@@ -49,7 +49,7 @@ const Preferences = props => {
                 defaultChecked //
               />
             }
-            label="Allow teamates invite others"
+            label="Example option 1"
           />
           <FormControlLabel
             control={
@@ -58,7 +58,7 @@ const Preferences = props => {
                 defaultChecked //
               />
             }
-            label="Private Project"
+            label="Example option 2"
           />
         </div>
       </CardContent>

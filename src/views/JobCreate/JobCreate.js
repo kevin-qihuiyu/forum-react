@@ -5,10 +5,8 @@ import { Button } from '@material-ui/core';
 import { Page } from 'components';
 import {
   Header,
-  AboutAuthor,
-  AboutProject,
+  About,
   Preferences,
-  ProjectCover,
   JobDetails
 } from './components';
 
@@ -22,13 +20,13 @@ const useStyles = makeStyles(theme => ({
   aboutAuthor: {
     marginTop: theme.spacing(3)
   },
-  aboutProject: {
+  about: {
     marginTop: theme.spacing(3)
   },
   projectCover: {
     marginTop: theme.spacing(3)
   },
-  JobDetails: {
+  jobDetails: {
     marginTop: theme.spacing(3)
   },
   preferences: {
@@ -48,10 +46,8 @@ const JobCreate = () => {
       title="Project Create"
     >
       <Header />
-      <AboutAuthor className={classes.aboutAuthor} />
-      <AboutProject className={classes.aboutProject} />
-      <ProjectCover className={classes.projectCover} />
-      <JobDetails className={classes.JobDetails} />
+      <About className={classes.about} />
+      <JobDetails className={classes.jobDetails} />
       <Preferences className={classes.preferences} />
       <div className={classes.actions}>
         <Button

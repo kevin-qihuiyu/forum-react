@@ -20,9 +20,9 @@ const JobDetails = props => {
       {...rest}
       className={clsx(classes.root, className)}
     >
-      <CardHeader title="Project details" />
+      <CardHeader title="Job description details" />
       <CardContent>
-        <RichEditor placeholder="Say something about the product..." />
+        <RichEditor placeholder="Describe the Job requirements..." />
       </CardContent>
     </Card>
   );
